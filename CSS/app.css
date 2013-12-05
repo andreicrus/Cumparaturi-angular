@@ -47,7 +47,7 @@ p { padding-left: 15px; }
 
 p { padding-left: 15px; }
 body{
-    background: url(http://khongthe.com/wallpapers/nature/yellow-background-77713.jpg) no-repeat center center fixed;
+    background: url('yellow-background-77713.jpg') no-repeat center center fixed;
     font-weight: bold;
 }
 button{
@@ -84,7 +84,7 @@ li {
 }
 
 #edit_button {
-    background: url('http://icons.iconarchive.com/icons/imil/painting-tools/16/Pen-icon.png') left;
+    background: url('pen.png') left;
     width: 20px;
     height: 20px;
     left:40px;
