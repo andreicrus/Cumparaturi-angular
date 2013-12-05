@@ -1,0 +1,98 @@
+/* app css stylesheet */
+#tabs ul {
+    list-style-type: none;
+}
+
+#tabs ul div {
+    display: inline-block;
+    clear: none;
+    float: left;
+    height: 24px;
+}
+
+#tabs ul div a {
+    position: relative;
+    margin-top: 16px;
+    display: block;
+    margin-left: 6px;
+    line-height: 24px;
+    padding-left: 10px;
+    z-index: 9999;
+    border: 1px solid #000000;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    width: 130px;
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#tabs ul div a:hover {
+    text-decoration: underline;
+}
+
+#tabs #Content_Area {
+    padding: 0 15px;
+    clear:both;
+    overflow:hidden;
+    line-height:19px;
+    position: relative;
+    top: 20px;
+    z-index: 5;
+    height: 1500px;
+    overflow: hidden;
+}
+
+p { padding-left: 15px; }
+
+p { padding-left: 15px; }
+body{
+    background: url(http://khongthe.com/wallpapers/nature/yellow-background-77713.jpg) no-repeat center center fixed;
+    font-weight: bold;
+}
+button{
+    font-weight: bold;
+}
+h4{
+    margin:30px 15px 45px 60px;
+    color:darkred;
+    font-weight: bold;
+}
+
+p { padding-left: 15px;
+
+}
+
+body {
+    padding-top: 20px;
+}
+
+
+.strike {
+    text-decoration: line-through;
+}
+
+.text{
+    width:100px;
+}
+
+li {
+    width:800px;
+    list-style-type : none;
+    padding-top: 15px;
+    font:italic 15px, Verdana, sans-serif;
+}
+
+#edit_button {
+    background: url('http://icons.iconarchive.com/icons/imil/painting-tools/16/Pen-icon.png') left;
+    width: 20px;
+    height: 20px;
+    left:40px;
+
+}
+
+h1{
+    padding-left: 100px;
+    font-style: italic;
+    margin:10px 5px 15px 20px;
+}

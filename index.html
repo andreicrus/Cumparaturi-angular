@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en" ng-app="listAppControllers">
+<head>
+
+    <meta charset="utf-8">
+    <title>Lista de cumparaturi</title>
+    <link rel="stylesheet" href="CSS/app.css">
+    <link rel="stylesheet" href="CSS/bootstrap.css">
+    <script src="lib/angular/angular.js"></script>
+    <script src="lib/angular/angular-route.js"></script>
+    <script src="JS/app.js"></script>
+    <script src="JS/controller.js"></script>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <title>Untitled 1</title>
+
+
+
+    <script type="text/javascript">
+        function tab(tab) {
+            document.getElementById('tab1').style.display = 'none';
+            document.getElementById('tab2').style.display = 'none';
+            document.getElementById('li_tab1').setAttribute("class", "");
+            document.getElementById('li_tab2').setAttribute("class", "");
+            document.getElementById(tab).style.display = 'block';
+            document.getElementById('li_'+tab).setAttribute("class", "active");
+        }
+    </script>
+
+</head>
+
+<body ng-controller = "ProductController">
+<div id="tabs">
+    <ul>
+        <div id="li_tab1" onclick="tab('tab1')"><a>Vineri</a> </div><div id="li_tab2" onclick="tab('tab2')"><a>Sambata</a></div>
+    </ul>
+    <div id="Content_Area">
+        <div id="tab1">
+
+<h4> Lista de cumparaturi de vineri: </h4>
+<br><br>
+
+<div>
+    Adauga Produs:
+    <button type="button" ng-click="showProduct=!showProduct">+</button>
+    <div ng-show = "showProduct">
+        Nume: <input class="text" type="text" placeholder="Nume" ng-model="newProduct.name " required/>
+        Descriere: <input class="text" type="text" placeholder="Descriere" ng-model="newProduct.description"/>
+        <input type="submit" ng-click="addProduct()" name="Adauga" value="Ok"/>
+    </div>
+
+    <br><br>
+
+    <div>
+        <li ng-class="{strike:product.checked}" ng-repeat="product in products | filter:query | filter:newProduct.list:true |filter: categoryfilter:true | orderBy:orderProp">
+            <input type="checkbox" ng-model="product.checked"/> {{product.name}} . {{product.description}}
+            <button id="edit_button" ng-click="editProduct(product.id)" value="Edit" /></p>
+        </li>
+    </div>
+
+    <br><br>
+
+    <div>
+        Cauta in lista: <input class="text" ng-model="query">
+    </div>
+
+    <div>
+        <button type="button" ng-click="remove()">StergeProduseSelectate</button>
+    </div>
+</div>
+        </div>
+        <div id="tab2" style="display: none;">
+            <h4> Lista de cumparaturi de sambata:  </h4>
+	<h5> -UnderConstruction- </h5>
+	<br><br>
+
+            <div>
+                Adauga Produs:
+                <button type="button" ng-click="showProduct=!showProduct">+</button>
+                <div ng-show = "showProduct">
+                    Nume: <input class="text" type="text" placeholder="Nume" ng-model="newProduct.name " required/>
+                    Descriere: <input class="text" type="text" placeholder="Descriere" ng-model="newProduct.description"/>
+                    <input type="submit" ng-click="addProduct()" name="Adauga" value="Ok"/>
+                </div>
+
+                <br><br>
+
+                <div>
+                    <li ng-class="{strike:product.checked}" ng-repeat="product in products2 | filter:query | filter:newProduct.list:true |filter: categoryfilter:true | orderBy:orderProp">
+                        <input type="checkbox" ng-model="product.checked"/> {{product.name}}  {{product.description}}
+                        <button id="edit_button" ng-click="editProduct(product.id)" value="Edit" /></p>
+                    </li>
+                </div>
+
+                <br><br>
+
+                <div>
+                    Cauta in lista: <input class="text" ng-model="query">
+                </div>
+
+                <div>
+                    <button type="button" ng-click="remove()">StergeProduseSelectate</button>
+                </div>
+            </div>
+        </div>
+
+</div>
+</div>
+
+</body>
+</html>
